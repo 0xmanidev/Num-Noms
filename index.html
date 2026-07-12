@@ -45,5 +45,12 @@
     <footer>
         <span class="author">Factor Game is written by <a rel="author" href="https://github.com/0xmanidev">0xmanidev</a></span>
     </footer>
+    <script src="main.js"></script>
+    <script>
+        var canvas = document.getElementById('factors-game-canvas');
+        canvas.width = window.innerWidth*2;
+        canvas.height = (window.innerHeight* .8)*2;
+        FactorsGame.init(canvas,{changeDocumentTextColor:true}).start();
+    </script>
 </body>
 </html>

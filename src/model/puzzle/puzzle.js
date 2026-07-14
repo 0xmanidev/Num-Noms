@@ -34,7 +34,22 @@ export default class Puzzle{
         this.number = this.orginal;
         this.currentRow = 0;
     }
-    state(){}
-    isComplete(){}
-    assertOngoing(){}
+    state(){
+        if(this.currentRow !==0&& this.number ===1){
+            return "ace";
+        }
+        if(this.currentRow >= this.board.get().length){
+            return "done";
+        }
+        return"ongoing";
+    }
+    isComplete(){
+        const state = this.state();
+        return state === "ace" || state === "done";
+    }
+    assertOngoing(){
+        if(this.isComplete()){
+            throw new Error("Puzzle is complete.");
+        }
+    }
 }

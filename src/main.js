@@ -1,6 +1,6 @@
 import './style.css'
 
-import FactorGame from "./FactorGame.js"
+import FactorGame from "./FactorsGame.js"
 
 const canvas = document.getElementById("factors-game-canvas");
 canvas.width = window.innerWidth * 2;

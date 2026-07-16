@@ -1,4 +1,4 @@
-export default class levelPalette{
+export default class LevelPalette{
     constructor(numberColor,boardColors,backgroundColor){
         this.numberColor = numberColor;
         this.boardColors = boardColors;

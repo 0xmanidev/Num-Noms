@@ -1,6 +1,6 @@
-import HSL from "../../model/palette/HSL";
-import SingleColorPaletteBuilder from "../../model/palette/SingleColorPaletteBuilder";
-import levelPalette from "../../model/game/LevelPalette";
+import HSL from "../../Model/palette/HSL.js";
+import SingleColorPaletteBuilder from "../../Model/palette/SingleColorPaletteBuilder.js";
+import LevelPalette from "../../Model/game/LevelPalette.js";
 
 export default class NightRainbowTheme{
     constructor(){
@@ -27,6 +27,6 @@ export default class NightRainbowTheme{
     getLevelPalette(level){
         const numberColor = this.colors[(level-1)%7];
         const boardColors = this.paletteBuilder.build(16);
-        return new levelPalette(numberColor,boardColors);
+        return new LevelPalette(numberColor,boardColors);
     }
 }

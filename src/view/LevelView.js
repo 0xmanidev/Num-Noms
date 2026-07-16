@@ -129,15 +129,24 @@ export default class LevelView {
       return;
     }
 
-    // Cache block size and margin
-    if (
-      this.last === undefined ||
-      this.last.columns !== this.level.columns ||
-      this.last.rows !== this.level.rows
-    ) {
+    const board = this.level.puzzle.board;
+    const shouldRecalculate =
+      this.blockSize === undefined ||
+      this.leftMargin === undefined ||
+      this.lastLevel !== this.level ||
+      this.lastRenderRegionWidth !== this.renderRegion.width ||
+      this.lastRenderRegionHeight !== this.renderRegion.height ||
+      this.lastRenderRegionX !== this.renderRegion.x ||
+      this.lastRenderRegionY !== this.renderRegion.y;
+
+    if (shouldRecalculate) {
       this.determineBlockSize();
       this.determineLeftMargin();
-      this.last = this.level;
+      this.lastLevel = this.level;
+      this.lastRenderRegionWidth = this.renderRegion.width;
+      this.lastRenderRegionHeight = this.renderRegion.height;
+      this.lastRenderRegionX = this.renderRegion.x;
+      this.lastRenderRegionY = this.renderRegion.y;
     }
 
     this.resetFont();

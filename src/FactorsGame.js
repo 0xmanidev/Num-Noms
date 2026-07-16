@@ -1,15 +1,15 @@
-import TutorialState from "./states/TutorialState.js";
-import PlayingState from "./states/PlayingState.js";
-import CompleteState from "./states/CompleteState.js";
-import SelectState from "./states/SelectState.js";
+import TutorialState from "./States/TutorialState.js";
+import PlayingState from "./States/PlayingState.js";
+import CompleteState from "./States/CompleteState.js";
+import SelectState from "./States/SelectState.js";
 
-import Levels from "./model/game/Levels.js";
-import XSPRNG from "./model/random/XSPRNG.js";
+import Levels from "./Model/game/Levels.js";
+import XSPRNG from "./Model/random/XSPRNG.js";
 
-import OptimizedStorageManager from "./storage/OptimizedStorageManager.js";
-import Score from "./storage/Score.js";
+import OptimizedStorageManager from "./Storage/OptimizedStorageManager.js";
+import Score from "./Storage/Score.js";
 
-import NightRainbowTheme from "./view/Themes/NightRainbowTheme.js";
+import NightRainbowTheme from "./View/Themes/NightRainbowTheme.js";
 
 export default class FactorsGame {
   constructor(levels, config, storageManager, score, canvas) {

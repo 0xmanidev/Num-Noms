@@ -4,12 +4,12 @@ export default class TapInput{
         this.tapRegions = Array.isArray(tapRegions)?tapRegions:[];
         this.upCount = 0;
         this.listeners={
-            touchStart:this.tapRegions.bind(this),
-            mouseDown:this.tapRegions.bind(this)
+            touchStart:this.tap.bind(this),
+            mouseDown:this.tap.bind(this)
         };
     }
     add(tapRegion){
-            this.tapRegion.push(tapRegion);
+            this.tapRegions.push(tapRegion);
     }
     listen(){
         this.element.addEventListener("touchstart",this.listeners.touchStart);

@@ -9,4 +9,13 @@ export default class BoundingBox{
             y:y+length
         };
     }
+
+    isPointWithin(x, y) {
+        return (
+            x >= this.topLeft.x &&
+            x <= this.bottomRight.x &&
+            y >= this.topLeft.y &&
+            y <= this.bottomRight.y
+        );
+    }
 }

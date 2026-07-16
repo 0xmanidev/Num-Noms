@@ -1,7 +1,7 @@
-import XSPRNG from "../../model/random/XSPRNG";
-import MonochromaticPaletteBuilder from "../../model/palette/MonochromaticPaletteBuilder";
-import HSL from "../../model/palette/HSL";
-import levelPalette from "../../model/game/LevelPalette";
+import XSPRNG from "../../Model/random/XSPRNG.js";
+import MonochromaticPaletteBuilder from "../../Model/palette/MonochromaticPaletteBuilder.js";
+import HSL from "../../Model/palette/HSL.js";
+import LevelPalette from "../../Model/game/LevelPalette.js";
 
 export default class ClassicTheme {
     constructor(paletteRange){
@@ -13,7 +13,7 @@ export default class ClassicTheme {
             0.8
         );
     }
-    numberColor = #FFFFFF;
+    numberColor = "#FFFFFF";
 
     defaultBackgroundColor = "#D3D3D3";
 
@@ -43,7 +43,7 @@ export default class ClassicTheme {
         const backgroundColor = numberColor.clone();
         backgroundColor.l = Math.floor(numberColor.l+45)%101;
         backgroundColor.a =1;
-        return new levelPalette(
+        return new LevelPalette(
             numberColor,
             boardColors,
             backgroundColor

@@ -1,6 +1,6 @@
-import Board from "../Puzzle/Board.js";
-import Puzzle from "../Puzzle/Puzzle.js";
-import Level from "./Level.js";
+import Board from "../puzzle/Board.js";
+import Puzzle from "../puzzle/Puzzle.js";
+import Level from "./level.js";
 
 export default class Levels {
   constructor(prng, theme) {

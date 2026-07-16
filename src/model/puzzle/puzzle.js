@@ -1,7 +1,7 @@
 export default class Puzzle{
     constructor(number,board){
         this.number = number;
-        this.orginal = number;
+        this.original = number;
         this.board = board;
         this.currentRow = 0;
         this.history = [];
@@ -20,7 +20,7 @@ export default class Puzzle{
             throw new Error("Index not available for play")
         }
         const number = this.board.get(this.currentRow,index);
-        if(this.number%number% number === 0){
+        if(this.number % number === 0){
             this.number/=number;
         }else{
             this.number+=number;
@@ -31,7 +31,7 @@ export default class Puzzle{
     }
     reset(){
         this.history = [];
-        this.number = this.orginal;
+        this.number = this.original;
         this.currentRow = 0;
     }
     state(){

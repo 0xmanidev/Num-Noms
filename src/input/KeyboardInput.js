@@ -2,10 +2,10 @@ export default class KeyboardInput{
     constructor(inputController){
         this.inputController = inputController;
         this.listeners  ={
-            keyDown: this.listeners.bind(this)
+            keyDown: this.handleKeyDown.bind(this)
         };
     }
-    listeners(e){
+    handleKeyDown(e){
         switch(e.keyCode){
             case 37:
             case 65:

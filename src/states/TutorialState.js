@@ -1,4 +1,4 @@
-import PlayingState from "./PlayingState";
+import PlayingState from "./PlayingState.js";
 import RenderRegion from "../View/RenderRegion.js";
 import TutorialRenderer from "../View/TutorialRenderer.js";
 
@@ -9,9 +9,9 @@ export default class TutorialState {
     this.playingState = new PlayingState(game);
 
     const renderRegion = new RenderRegion(
-      null,
+      0,
       game.canvas.height * 0.005,
-      null,
+      game.canvas.width,
       game.canvas.height * 0.10
     );
 

@@ -60,14 +60,14 @@ export default class TutorialRenderer {
   }
 
   drawLine(text) {
+    const x = this.renderRegion.x ?? 0;
+    const y = this.renderRegion.y ?? 0;
+    const width = this.renderRegion.width ?? this.brush.canvas.width;
+    const height = this.renderRegion.height ?? this.brush.canvas.height * 0.1;
+
     this.brush.fillStyle = this.blockColor;
     this.brush.strokeStyle = this.textColor;
-    this.brush.lineWidth = this.renderRegion.width * 0.005;
-
-    const x = this.renderRegion.x;
-    const y = this.renderRegion.y;
-    const width = this.renderRegion.width;
-    const height = this.renderRegion.height;
+    this.brush.lineWidth = Math.max(1, width * 0.005);
 
     this.brush.fillRect(x, y, width, height);
     this.brush.strokeRect(x, y, width, height);

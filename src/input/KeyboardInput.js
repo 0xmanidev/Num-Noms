@@ -33,4 +33,16 @@ export default class KeyboardInput{
                 break;
         }
     }
+    listen(){
+        document.addEventListener(
+            "keydown",
+            this.listeners.keyDown
+        );
+    }
+    detach(){
+        document.removeEventListener(
+            "keydown",
+            this.listeners.keyDown
+        );
+    }
 }
